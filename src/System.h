@@ -1,8 +1,7 @@
 #include "raylib.h"
+#include "Prototypes.h"
 #include <vector>
-// using namespace std;
-
-struct System ;
+using namespace std;
 
 class MapObject
 {
@@ -26,7 +25,7 @@ private:
 
 struct System
 {
-    std::vector<MapObject> mapObjects;
+    vector<MapObject> mapObjects;
     void Start() , Update() , Draw() ;
 
 };
