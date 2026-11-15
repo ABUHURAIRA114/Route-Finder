@@ -1,4 +1,3 @@
-#pragma once
 #include "../Classes/Classes.h"
 
 void System::Draw()    //void DrawRectangle(int posX, int posY, int width, int height, Color color);  
