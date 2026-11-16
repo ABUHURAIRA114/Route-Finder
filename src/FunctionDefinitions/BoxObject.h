@@ -1,11 +1,16 @@
 #include "../Classes/Classes.h"
 
-BoxObject::BoxObject(float x, float y, float width, float height, Color c)
-    : x(x), y(y), width(width), height(height), color(c) {}
+BoxObject::BoxObject(string name, float x, float y, float width, float height, Color c)
+    : name(name), x(x), y(y), width(width), height(height), color(c) {}
 
 bool BoxObject::IsHovered()
 {
     Vector2 mouse = GetMousePosition();
-    return false;
+
+    if (mouse.x < x   || mouse.x > x + width ) return false;
+    
+    if( mouse.y < y   || mouse.y > y + height  ) return false ;
+    
+    return true;
 }
 

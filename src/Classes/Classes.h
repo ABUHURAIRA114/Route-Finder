@@ -2,34 +2,31 @@
 #include "raylib.h"
 #include "Prototypes.h"
 #include <vector>
+#include <string>
 using namespace std;
 
-class BoxObject
+struct BoxObject
 {
+    string name;
     float x, y, width, height;
-    bool isSelected ;
+    bool isSelected;
     Color color;
 
-    public:
-    BoxObject(float x, float y, float width, float height, Color c);
+    BoxObject(string name, float x, float y, float width, float height, Color c);
 
     void Draw();
     bool IsHovered();
-
-    friend struct System;  // Declare System as a friend of MapObject
 };
 
-class MapObject : BoxObject
+struct MapObject : BoxObject
 {
-public:
-    MapObject(float x, float y, float width, float height, Color c);
+
+    MapObject(string name, float x, float y, float width, float height, Color c);
     void Update();
-    
-    friend struct System;  // Declare System as a friend of MapObject
 };
 
 struct System
 {
     vector<MapObject> mapObjects;
-    void Start() , Update() , Draw() ;              
+    void Start(), Update(), Draw();
 };
