@@ -3,3 +3,9 @@
 BoxObject::BoxObject(float x, float y, float width, float height, Color c)
     : x(x), y(y), width(width), height(height), color(c) {}
 
+bool BoxObject::IsHovered()
+{
+    Vector2 mouse = GetMousePosition();
+    return false;
+}
+

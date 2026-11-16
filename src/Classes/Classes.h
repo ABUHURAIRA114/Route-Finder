@@ -31,6 +31,5 @@ public:
 struct System
 {
     vector<MapObject> mapObjects;
-    void Start() , Update() , Draw() ;
-
+    void Start() , Update() , Draw() ;              
 };
