@@ -17,11 +17,10 @@ int main()
     SetTargetFPS(60);
 
     while (!WindowShouldClose())
-    {
-        temp = "None";
+    { 
         for (auto &mapObject : sys.mapObjects)
         {
-            if (mapObject.IsHovered())
+            if (mapObject.IsClicked())
             {
                 temp = mapObject.name;
                 break;

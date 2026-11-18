@@ -14,3 +14,12 @@ bool BoxObject::IsHovered()
     return true;
 }
 
+bool BoxObject::IsClicked(){
+    if(!IsMouseButtonPressed(0))
+        return false;
+
+    if (!IsHovered())
+        return false;
+
+    return true;
+}

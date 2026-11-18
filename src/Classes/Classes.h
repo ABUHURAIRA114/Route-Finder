@@ -16,6 +16,7 @@ struct BoxObject
 
     void Draw();
     bool IsHovered();
+    bool IsClicked();
 };
 
 struct MapObject : BoxObject
